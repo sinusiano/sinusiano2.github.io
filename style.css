@@ -19,8 +19,8 @@ body {
 .custom-table {
     border-collapse: separate; /* Cambia a separate para permitir bordes individuales */
     border-spacing: 0; /* Elimina el espacio entre celdas */
-    
-    width: 80%;
+    overflow-x: auto; /* Permite scroll horizontal en dispositivos pequeños */
+    width: 100%; 
     max-width: 800px;
     margin-left: 80px;
     background-color: #cecaca;
@@ -28,6 +28,12 @@ body {
     border: 1px solid #770606;
 }
 
+/* Media queries para dispositivos móviles */
+@media (max-width: 600px) {
+    .custom-table {
+        font-size: 14px; /* Reduce el tamaño de fuente en pantallas pequeñas */
+    }
+}
 
 .custom-table th, .custom-table td {
     border: 1px solid #ddd;
